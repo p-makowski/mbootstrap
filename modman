@@ -14,7 +14,9 @@ skin/frontend/base/default/gulp             skin/frontend/base/default/gulp
 
 # Mbootstrap Theme
 #
-app/design/frontend/mbootstrap              app/design/frontend/mbootstrap
+app/design/frontend/mbootstrap/advanced     app/design/frontend/mbootstrap/advanced
+app/design/frontend/mbootstrap/default      app/design/frontend/mbootstrap/default
+app/design/frontend/mbootstrap/simple       app/design/frontend/mbootstrap/simple
 skin/frontend/mbootstrap/advanced           skin/frontend/mbootstrap/advanced
 skin/frontend/mbootstrap/default            skin/frontend/mbootstrap/default
 skin/frontend/mbootstrap/simple             skin/frontend/mbootstrap/simple
