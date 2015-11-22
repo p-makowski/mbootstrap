@@ -15,7 +15,8 @@
 // $gray-light:             lighten($gray-base, 46.7%) !default; // #777
 // $gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
 
-// $brand-primary:         darken(#428bca, 6.5%) !default; // #337ab7
+  //$brand-primary:         darken(#ca053c, 6.5%) !default; // #337ab7
+  //$brand-primary:         darken(#ca2d7d, 6.5%); // #337ab7
 // $brand-success:         #5cb85c !default;
 // $brand-info:            #5bc0de !default;
 // $brand-warning:         #f0ad4e !default;
@@ -410,7 +411,7 @@ $navbar-default-toggle-icon-bar-bg:        #fff;
 // $navbar-inverse-toggle-border-color:        #333 !default;
 
 // Alternate navbars
-$navbar-main-bg:								#707070 !default;
+$navbar-main-bg:								#FE0096 !default;
 $navbar-main-color:								#fff !default;
 
 $navbar-main-link-color:						$navbar-main-color !default;
