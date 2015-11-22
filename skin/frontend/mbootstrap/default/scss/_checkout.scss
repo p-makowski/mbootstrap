@@ -105,6 +105,9 @@
                     .button {
                         float: right;
                         margin-left: ($line-height-computed / 2);
+                        background-color: $checkout-button-continue-background-color;
+                        color: $checkout-button-continue-color;
+                        border-color: darken($checkout-button-continue-background-color, 10%);
                     }
                 }
             }
@@ -165,7 +168,9 @@
         }
 
         label {
-            margin: 0;
+            margin: -15px 0 0 30px;
+            position: relative;
+            display: block;
         }
     }
     > dd {
