@@ -115,6 +115,7 @@
                     @extend .list-unstyled;
 
                     margin: 0;
+                    margin-top: 7px;
 
                     .separator {
                         display: none;
@@ -126,6 +127,16 @@
                         vertical-align: middle;
                     }
                 }
+
+                .share-links {
+                    @extend .add-to-links;
+                }
+
+                .link-share {
+                    @extend .link-wishlist;
+                }
+
+
 
             //
             // Short description
