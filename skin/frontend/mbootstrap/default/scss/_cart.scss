@@ -214,6 +214,10 @@
                 > tbody > tr > td {
                     border-top: none;
                 }
+
+                > tbody > tr > td.discount > .price {
+                    color: $brand-primary;
+                }
             }
         }
 

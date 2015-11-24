@@ -8,146 +8,157 @@
 
     > li {}
 
-        .step-title {
-            margin: 0 0 $line-height-computed;
-            position: relative;
+    .step-title {
+        margin: 0 0 $line-height-computed;
+        position: relative;
 
-            border-bottom: 2px solid $gray-lighter;
+        border-bottom: 2px solid $gray-lighter;
 
-            @include clearfix;
+        @include clearfix;
 
-            > h2 {
-                font-size: $font-size-large * 1.25;
-                font-weight: normal;
+        > h2 {
+            font-size: $font-size-large * 1.25;
+            font-weight: normal;
 
-                float: left;
-                margin: 0 0 0 (($line-height-computed * 1.5) + 10);
+            float: left;
+            margin: 0 0 0 (($line-height-computed * 1.5) + 10);
 
-                line-height: normal;
+            line-height: normal;
 
-                color: $gray-light;
+            color: $gray-light;
+        }
+
+        > a {
+            float: right;
+            display: none;
+
+            @media (min-width: $screen-sm-min) {
+                opacity: 0.4;
+                transition: opacity 0.25s ease-in-out;
             }
+        }
 
+        > .number {
+            font-size: $font-size-large * 1.25;
+            font-weight: bold;
+
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: ($line-height-computed * 1.5);
+            height: ($line-height-computed * 1.5);
+
+            line-height: ($line-height-computed * 1.5);
+            text-align: center;
+
+            background: $gray-lighter;
+            color: $gray-light;
+
+            border-radius: 2px 2px 0 0;
+        }
+
+        &:hover {
             > a {
-                float: right;
-                display: none;
+                opacity: 1;
+            }
+        }
+    }
 
-                @media (min-width: $screen-sm-min) {
-                    opacity: 0.1;
-                    transition: opacity 0.25s ease-in-out;
+    .step {
+        margin: $line-height-computed 0;
+
+        form {
+            margin-bottom: 0;
+        }
+
+        .ccsave {
+            @include make-row();
+
+            > .ccsave__i {
+                // @include make-xs-column(12);
+                @include make-sm-column(6);
+            }
+        }
+
+        // Tablet portair view
+        @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) and (orientation:portrait) {
+            &#checkout-step-login {
+                .btn-link {
+                    font-size: $font-size-small;
                 }
+            }
+        }
+    }
+
+    .section {
+        &:not([id="opc-login"]) {
+            .buttons-set {
+                text-align: right;
+                line-height: $input-height-base;
+
+                @include clearfix;
+
+                .required {
+                    float: left;
+                }
+
+                .button {
+                    float: right;
+                    margin-left: ($line-height-computed / 2);
+                    background-color: $checkout-button-continue-background-color;
+                    color: $checkout-button-continue-color;
+                    border-color: darken($checkout-button-continue-background-color, 10%);
+                }
+            }
+        }
+    }
+
+    .allow {
+        > .step-title {
+            > h2 {
+                color: $text-color;
+                cursor: pointer;
             }
 
             > .number {
-                font-size: $font-size-large * 1.25;
-                font-weight: bold;
+                text-shadow: none;
 
-                position: absolute;
-                left: 0;
-                bottom: 0;
-                width: ($line-height-computed * 1.5);
-                height: ($line-height-computed * 1.5);
-
-                line-height: ($line-height-computed * 1.5);
-                text-align: center;
-
-                background: $gray-lighter;
-                color: $gray-light;
-
-                border-radius: 2px 2px 0 0;
+                color: $black;
             }
 
-            &:hover {
-                > a {
-                    opacity: 1;
-                }
+            > a {
+                display: inline-block;
+                margin-top: 7px;
             }
         }
+    }
 
-        .step {
-            margin: $line-height-computed 0;
+    .active {
+        > .step-title {
+            > .number {
+                text-shadow: none;
 
-            form {
-                margin-bottom: 0;
+                color: $black;
             }
-
-            .ccsave {
-                @include make-row();
-
-                > .ccsave__i {
-                    // @include make-xs-column(12);
-                    @include make-sm-column(6);
-                }
+            > h2 {
+                cursor: default;
             }
-
-            // Tablet portair view
-            @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) and (orientation:portrait) {
-                &#checkout-step-login {
-                    .btn-link {
-                        font-size: $font-size-small;
-                    }
-                }
+            > a {
+                display: none;
             }
         }
+    }
 
-        .section {
-            &:not([id="opc-login"]) {
-                .buttons-set {
-                    text-align: right;
-                    line-height: $input-height-base;
-
-                    @include clearfix;
-
-                    .required {
-                        float: left;
-                    }
-
-                    .button {
-                        float: right;
-                        margin-left: ($line-height-computed / 2);
-                        background-color: $checkout-button-continue-background-color;
-                        color: $checkout-button-continue-color;
-                        border-color: darken($checkout-button-continue-background-color, 10%);
-                    }
-                }
-            }
+    .data-table {
+        div.product-image {
+            float: left;
+            margin-right: 15px;
         }
 
-        .allow {
-            > .step-title {
-                > h2 {
-                    color: $text-color;
-                    cursor: pointer;
-                }
-
-                > .number {
-                    text-shadow: none;
-
-                    color: $black;
-                }
-
-                > a {
-                    display: inline-block;
-                    margin-top: 7px;
-                }
-            }
+        > tfoot > tr > td.discount > .price {
+            color: $brand-primary;
         }
-
-        .active {
-            > .step-title {
-                > .number {
-                    text-shadow: none;
-
-                    color: $black;
-                }
-                > h2 {
-                    cursor: default;
-                }
-                > a {
-                    display: none;
-                }
-            }
-        }
+    }
 }
 
 // Shipping Methods
