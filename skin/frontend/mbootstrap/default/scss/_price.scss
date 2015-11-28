@@ -37,7 +37,9 @@
 // -------------------------
 .special-price {
     .price-label {}
-    .price {}
+    .price {
+        color: $navbar-main-bg;
+    }
 }
 
 
