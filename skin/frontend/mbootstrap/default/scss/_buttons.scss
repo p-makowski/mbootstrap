@@ -58,6 +58,12 @@ p.back-link {
     min-width: 150px;
 }
 
+.btn-see-more {
+    @extend .btn-slideshow;
+
+    margin-top: 0;
+}
+
 // Links
 .link-edit,
 .link-cart,
